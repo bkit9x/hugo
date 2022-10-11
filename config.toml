@@ -1,0 +1,338 @@
+baseURL = "https://kha.is-a.dev"
+languageCode = "vi-vn"
+defaultContentLanguage = "vi-vn"
+title = "Blog của Kha"
+enableRobotsTXT = true
+enableEmoji = true
+theme = "hugo-theme-luna"
+timeout = 60_000
+timeZone = "Asia/Ho_Chi_Minh"
+enableGitInfo = false
+hasCJKLanguage = true
+paginate = 10
+summaryLength = 70
+canonifyURLs = false
+relativeURLs = false
+
+[permalinks]
+posts = "/:year/:month/:day/:slug.html"
+pages = "/:slug.html"
+
+[author]
+name = "HoangKha"
+
+[frontmatter]
+lastmod = [
+  ":git",
+  "lastmod",
+  ":fileModTime",
+  "date",
+  "publishDate",
+  ":default"
+]
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[imaging]
+resampleFilter = "CatmullRom"
+quality = 95
+anchor = "smart"
+
+[caches.getresource]
+dir = ":resourceDir/_gen"
+maxAge = "24h"
+
+[privacy.googleAnalytics]
+anonymizeIP = true
+
+[privacy.youtube]
+privacyEnhanced = true
+
+[sitemap]
+changefreq = "weekly"
+priority = 0.5
+filename = "sitemap.xml"
+
+[["$manuMain"]]
+name = "Home"
+weight = 10
+identifier = "home"
+url = "/"
+
+  ["$manuMain".params]
+  icon = "eva eva-home"
+
+[["$manuMain"]]
+name = "About"
+weight = 20
+identifier = "about"
+url = "/about/"
+
+  ["$manuMain".params]
+  icon = "eva eva-heart"
+
+[["$manuMain"]]
+name = "Links"
+weight = 30
+identifier = "links"
+url = "/links/"
+
+  ["$manuMain".params]
+  icon = "eva eva-people"
+
+[["$manuMain"]]
+name = "Archives"
+weight = 40
+identifier = "archives"
+url = "/archives/"
+
+  ["$manuMain".params]
+  icon = "eva eva-bar-chart"
+
+[["$manuMain"]]
+name = "Tags"
+weight = 50
+identifier = "tags"
+url = "/tags/"
+
+  ["$manuMain".params]
+  icon = "eva eva-hash"
+
+[["$manuMain"]]
+name = "Categories"
+weight = 60
+identifier = "categories"
+url = "/categories/"
+
+  ["$manuMain".params]
+  icon = "eva eva-folder"
+
+[["$manuMain"]]
+name = "Twitter"
+weight = 70
+identifier = "twitter"
+url = "/twitter/"
+
+  ["$manuMain".params]
+  icon = "eva eva-twitter"
+
+[["$manuMain"]]
+name = "GitHub"
+weight = 80
+identifier = "github"
+url = "/github/"
+
+  ["$manuMain".params]
+  icon = "eva eva-github"
+
+[["$manuMain"]]
+name = "Search"
+weight = 999
+identifier = "search"
+url = "/search/"
+
+  ["$manuMain".params]
+  icon = "eva eva-search"
+
+[[menu.main]]
+name = "Home"
+weight = 10
+identifier = "home"
+url = "/"
+
+  [menu.main.params]
+  icon = "eva eva-home"
+
+[[menu.main]]
+name = "About"
+weight = 20
+identifier = "about"
+url = "/about/"
+
+  [menu.main.params]
+  icon = "eva eva-person"
+
+[[menu.main]]
+name = "Links"
+weight = 30
+identifier = "links"
+url = "/links/"
+
+  [menu.main.params]
+  icon = "eva eva-heart"
+
+[[menu.main]]
+name = "Archives"
+weight = 40
+identifier = "archives"
+url = "/archives/"
+
+  [menu.main.params]
+  icon = "eva eva-bar-chart"
+
+[[menu.main]]
+name = "GitHub"
+weight = 80
+identifier = "github"
+url = "/github/"
+
+  [menu.main.params]
+  icon = "eva eva-github"
+
+[[menu.main]]
+name = "Search"
+weight = 999
+identifier = "search"
+url = "/search/"
+
+  [menu.main.params]
+  icon = "eva eva-search"
+
+[markup.highlight]
+style = "dracula"
+guessSyntax = true
+tabWidth = 4
+lineNumbersInTable = true
+lineNos = true
+codeFences = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+publicCDN = ""
+topTitle = false
+sitemap = true
+themeColor = "#dd6065"
+blackAndWhite = false
+headlineCounter = false
+fixedNav = false
+font = 'Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif'
+since = "2022"
+autoDarkMode = true
+qrcodeAPI = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="
+i18nlist = true
+imageZoom = true
+lazyload = true
+googleTranslate = true
+pangu = true
+search = true
+lastmod = true
+readingTime = true
+wordCount = true
+pjax = true
+pwa = true
+katex = true
+backtop = true
+featuredImageHeight = "42%"
+defaultFeaturedImage = false
+author = "HoangKha"
+keywords = [ "HoangKha", "Lập trình web", "blog công nghệ web", "ứng dụng công nghệ" ]
+description = "Blog chia sẻ kiến thức về lập trình mà tôi biết được qua quá trình học tập và làm việc."
+
+  [params.announcement]
+  enabled = true
+  file = "README.md"
+
+  [params.comments]
+  enabled = true
+  provider = "giscus"
+
+    [params.comments.giscus]
+    repo = "Ice-Hazymoon/hugo-theme-luna"
+    repoID = "R_kgDOHQOwYw"
+    category = "Comments"
+    categoryID = "DIC_kwDOHQOwY84CP0Sy"
+    mapping = "title"
+    reactionsEnabled = 1
+    emitMetadata = 0
+    lazy = false
+    lang = "en"
+
+  [params.rss]
+  enabled = true
+  fullText = true
+
+  [params.console]
+  enabled = true
+  leftColor = "#dd6065"
+  leftText = "Hugo Theme Luna"
+  rightColor = "#feb462"
+  rightText = "Powered by Hugo ❤ Luna"
+
+  [params.customScript]
+  enabled = false
+  pjax = true
+
+  [params.runTime]
+  enabled = true
+  creatTime = "10/11/2022"
+
+  [params.outdatedInfoWarning]
+  enabled = true
+  day = 90
+
+  [params.share]
+  twitter = true
+  facebook = true
+  weibo = false
+  copyLinkText = true
+  qrcode = true
+
+  [params.license]
+  enabled = true
+  name = "CC BY-NC-ND 4.0"
+  icon = "Cc-by-nc-nd.svg"
+  url = "https://creativecommons.org/licenses/by-nc-nd/4.0"
+
+  [params.github]
+  id = "torvalds"
+  minStars = 5
+
+  [params.twitter]
+  rsshub = "https://rsshub.rssforever.com"
+  id = "GenshinImpact"
+  imageProcessing = true
+
+  [params.bionicReading]
+  enabled = true
+  autoBionic = false
+  skipLinks = false
+  excludeWords = [ ]
+  excludeNodeNames = [ ]
+  excludeClasses = [ "github" ]
+
+  [params.toc]
+  enabled = true
+  wordCount = 400
+
+  [params.HugoEncrypt]
+  Password = "123456"
+  Storage = "session"
+
+  [params.imageProcessing]
+  cover = true
+  content = true
+  autoResize = [ 1_080, 1_440 ]
+  webp = true
+
+  [params.opengraph]
+  image = "featured.png"
+
+    [params.opengraph.twitter]
+    cardType = "summary_large_image"
+    site = "@Ice_Hazymoon"
+
+[build]
+noJSConfigInAssets = true
+[languages.vi-vn]
+contentDir = "content/vi-vn"
+languageName = "Tiếng Việt"
+
+  [languages.vi-vn.params]
+  languageIcon = "images/i18n/en-us.svg"
+
+
+publishdir = "bkit9x.github.io"
